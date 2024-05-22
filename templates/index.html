@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Burndown Chart</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="input-section">
+            <form method="post" id="chartForm">
+                <label for="startDate">Sprint Start Date: </label>
+                <input type="date" id="startDate" name="startDate" required>
+                <label for="endDate">Sprint End Date: </label>
+                <input type="date" id="endDate" name="endDate" required>
+                <label for="storyPoints">Enter Story Points (comma-separated): </label>
+                <input type="text" id="storyPoints" name="storyPoints" placeholder="e.g. 10, 9, 8, 7, 6" required>
+                <div class="button-group">
+                    <button type="submit">Generate Chart</button>
+                    <button type="button" onclick="resetForm()">Reset</button>
+                </div>
+            </form>
+        </div>
+        <div class="chart-section">
+            {% if show_chart %}
+                <img src="{{ url_for('static', filename='burndown_chart.png') }}" alt="Burndown Chart">
+                <a href="{{ url_for('download_chart') }}" class="download-button">Download Chart</a>
+            {% endif %}
+        </div>
+    </div>
+    <script>
+        function resetForm() {
+            document.getElementById('chartForm').reset();
+            window.location.href = "/";
+        }
+    </script>
+</body>
+</html>
