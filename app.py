@@ -6,7 +6,7 @@ import datetime
 import matplotlib
 import os
 
-# Use the 'Agg' backend for Matplotlib to avoid issues with certain environments
+# The 'Agg' is used for Matplotlib to avoid issues with certain environments
 matplotlib.use('Agg')
 
 app = Flask(__name__)
@@ -55,11 +55,11 @@ def index():
         plt.gca().xaxis.set_major_locator(plt.matplotlib.dates.DayLocator())
         plt.ylim(0, max(initial_points, max(story_points)) + 10)  # Adjust the y-axis to start from 0 and go slightly above the max points
 
-        # Add annotations for actual burndown
+        # Shows the story points for actual burndown
         for i, txt in enumerate(story_points):
             plt.annotate(f'{txt}', (sprint_days[i], story_points[i]), textcoords="offset points", xytext=(0,10), ha='center')
 
-        # Add annotations for expected burndown
+        # Shows the story points for expected burndown
         for i, txt in enumerate(remaining_points):
             plt.annotate(f'{int(txt)}', (sprint_days[i], remaining_points[i]), textcoords="offset points", xytext=(0,-15), ha='center', color='#ff6347')
 
