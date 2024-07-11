@@ -30,4 +30,8 @@ Clone the repository to your local machine:
 ```bash
 git clone https://github.com/hckmar9/bdc-generator.git
 cd bdc-generator
+python3 -m venv env
+pip3 install requirements.txt
+source venv/bin/activate
+python3 app.py
 ```
