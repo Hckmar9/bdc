@@ -1,126 +1,137 @@
 /* Reset default browser styles */
-body, h1, p, input, button, label {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+body,
+h1,
+p,
+input,
+button,
+label {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 /* Basic styles for the body */
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f0f4f8;
-    color: #333;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
+  font-family: "Arial", sans-serif;
+  background-color: #f0f4f8;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
 }
 
 /* Container to center content */
 .container {
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    max-width: 500px;
-    width: 100%;
-    text-align: center;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  max-width: 700px;
+  height: 400px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Header styling */
+h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #007bff;
+}
+
+/* Instructions styling */
+.instructions {
+  font-size: 14px;
+  margin-bottom: 20px;
+  color: #555;
 }
 
 /* Input section styling */
 .input-section {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 /* Styles for form elements */
 label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
 }
 
-input[type="date"], input[type="text"], button {
-    width: calc(100% - 20px);
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 16px;
+input[type="date"],
+input[type="text"],
+button {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
 }
 
-input[type="date"], input[type="text"] {
-    background-color: #f9f9f9;
+input[type="date"],
+input[type="text"] {
+  background-color: #f9f9f9;
 }
 
 /* Flex container for buttons */
 .button-group {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 button {
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-    padding: 10px 20px;
-    font-size: 16px;
-    transition: background-color 0.3s ease;
-    flex: 1;
-    margin-right: 5px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  padding: 10px 20px;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  flex: 1;
+  margin-right: 5px;
 }
 
 button:last-child {
-    margin-right: 0;
+  margin-right: 0;
 }
 
 button[type="button"] {
-    background-color: #dc3545;
+  background-color: #dc3545;
 }
 
 button:hover {
-    background-color: #0056b3;
+  background-color: #0056b3;
 }
 
 button[type="button"]:hover {
-    background-color: #c82333;
+  background-color: #c82333;
 }
 
 /* Chart section styling */
 .chart-section {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 
 img {
-    max-width: 100%;
-    border-radius: 4px;
-}
-
-/* Summary section styling */
-#summary {
-    margin-top: 20px;
-    text-align: left;
-}
-
-#summary p {
-    margin: 5px 0;
-    font-weight: bold;
-    color: #555;
+  max-width: 100%;
+  border-radius: 4px;
 }
 
 /* Download button styling */
 .download-button {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 10px 15px;
-    background-color: #28a745;
-    color: white;
-    text-decoration: none;
-    border-radius: 4px;
-    transition: background-color 0.3s ease;
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 15px;
+  background-color: #28a745;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
 }
 
 .download-button:hover {
-    background-color: #218838;
+  background-color: #218838;
 }
